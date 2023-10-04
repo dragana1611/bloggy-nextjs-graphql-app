@@ -21,9 +21,6 @@ const BlogCard = ({
       <div className={styles.text}>
         <h2>{title}</h2>
         <div className={styles.details}>
-          {/* <div>
-            <p>{content}</p>
-          </div> */}
           <div className={styles.author}>
             <div className={styles.imgAuthor}>
               <img src={authorImg} alt={authorName} />
