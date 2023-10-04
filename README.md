@@ -1,3 +1,8 @@
+# Blog Next.js GraphQL
+
+![image](https://github.com/dragana1611/bloggy-nextjs-graphql-app/assets/77893122/0753a146-50d1-422b-97e7-598cedfb930b)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
