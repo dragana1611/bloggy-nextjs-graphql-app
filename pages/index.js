@@ -46,10 +46,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts);
-  if (!posts) {
-    return <Loader />;
-  }
+  if (!posts) return <Loader />;
 
   return (
     <>

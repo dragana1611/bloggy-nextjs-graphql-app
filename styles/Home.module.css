@@ -185,9 +185,9 @@
 
 /* Mobile and Tablet */
 @media (max-width: 1024px) {
-  .main{
+  .main {
     width: 100%;
-  padding: 1rem;
+    padding: 1rem;
   }
   .content {
     padding: 2rem;

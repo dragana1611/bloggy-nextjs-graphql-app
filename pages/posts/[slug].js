@@ -2,6 +2,7 @@ import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 import styles from "../../styles/Slug.module.css";
+import Button from "../../components/Button";
 
 const query = gql`
   query Post($slug: String!) {
@@ -62,15 +63,15 @@ export async function getStaticProps({ params }) {
 }
 
 const SinglePost = ({ post }) => {
+  if (!post) return <Loader />;
+
   return (
     <main className={styles.blog}>
-      <h1>Post</h1>
-      <Link href={'/'}>
-        <div className={styles.btn}>
-          <span>&#8592;</span> Home
-        </div>
+      <h1 className={styles.header}>Post</h1>
+      <Link href={"/"}>
+        <Button />
       </Link>
-      <div>
+      <div className={styles.imgContainer}>
         <img
           src={post.coverPhoto.url}
           alt={post.slug}
@@ -78,12 +79,13 @@ const SinglePost = ({ post }) => {
         />
       </div>
       <div className={styles.title}>
-        <div>
+        <div className={styles.authdetails}>
           <img src={post.author.avatar.url} alt={post.author.avatar.name} />
-        </div>
-        <div className={styles.authtext}>
-          <h6>By {post.author.name}</h6>
-          <h6 className={styles.date}>{post.datePublished}</h6>
+
+          <div className={styles.authtext}>
+            <h6>By {post.author.name}</h6>
+            <h6 className={styles.date}>{post.datePublished}</h6>
+          </div>
         </div>
       </div>
       <h2>{post.title}</h2>
