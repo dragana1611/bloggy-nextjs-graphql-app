@@ -12,7 +12,7 @@ const BlogCard = ({
   datePublished,
 }) => {
   return (
-    <div className={styles.card}>      
+    <div className={styles.card}>
       <Link href={`/posts/${slug}`}>
         <div className={styles.imgContainer}>
           <img src={coverPhoto} alt={title} />
