@@ -3,6 +3,7 @@ import { GraphQLClient, gql } from "graphql-request";
 import Link from "next/link";
 import styles from "../../styles/Slug.module.css";
 import Button from "../../components/Button";
+import Loader from "../../components/Loader";
 
 const query = gql`
   query Post($slug: String!) {
